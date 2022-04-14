@@ -1,6 +1,6 @@
 :root {
     --blue: #4970e4;
-    --blue-translucent: rgba(73, 112, 228, 0.7);
+    --blue-translucent: rgba(73, 112, 228, 0.3);
     --background: url('../img/gura\ slep.jpg');
 }
 
@@ -11,13 +11,18 @@
 
 html
 
-.overlay {
-    display: flex;
-}
+
 
 body {
     background: var(--background) 0 / cover fixed;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position-x: 0,0;
+    background-attachment: fixed
+}
+
+.overlay {
+    display: flex;
+    flex-direction: row;
+    background: var(--blue-translucent);
+    min-height: 100%;
+    min-width: 100%;
 }
