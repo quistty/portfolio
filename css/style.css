@@ -3,9 +3,11 @@
     --blue-translucent: rgba(73, 112, 228, 0.3);
     --white: #ffffff;
     --black: #000000;
+    --darkblue: #00225b;
     --background: url('../img/gura\ slep.jpg');
     --shadow: -3px 6px 24px hsla(328.6, 41.2%, 10%, 0.4);
 }
+
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -16,22 +18,36 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    transition: 0.3;
 }
 
 body {
     background: var(--background) 0 / cover fixed;
 }
 
-ul {
-    margin-bottom: 2em;
+h1 {
+    font-size: 98px;
 }
 
-li {
-    margin: 0.5em 0;
+p {
+    font-size: 60px;
+    font-weight: 600;
 }
 
-.small-text {
-    font-size: 1rem;
+.cardHeader img {
+    float: right;
+    width: 160px;
+    height: 160px;
+    background: #555;
+    clip-path: circle();
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+  
+.cardHeader h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
 }
 
 .overlay {
@@ -41,4 +57,15 @@ li {
     min-height: 100%;
 }
 
+.cardMain {
+    box-shadow: var(--shadow);
+    background: var(--darkblue);
+    position: relative;
+    color: var(--white);
+    width: 30%;
+    min-height: 50rem;
+    padding: 2.5rem 4rem;
+    margin: 4rem;
+    border-radius: 24px;    /* rounding the edges please don't remove future me */
+}
 
