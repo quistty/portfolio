@@ -18,7 +18,6 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    transition: 0.3;
 }
 
 body {
@@ -32,6 +31,7 @@ h1 {
 p {
     font-size: 60px;
     font-weight: 600;
+    margin-bottom: 30;
 }
 
 .cardHeader img {
@@ -63,9 +63,132 @@ p {
     position: relative;
     color: var(--white);
     width: 30%;
-    min-height: 50rem;
+    min-height: 40rem;
     padding: 2.5rem 4rem;
     margin: 4rem;
     border-radius: 24px;    /* rounding the edges please don't remove future me */
 }
 
+
+.floating-card a {
+    text-decoration: none;
+    color: #ef3358;
+}
+
+.floating-card a:hover {
+    text-decoration: underline;
+}
+
+.floating-card {
+    align-self: flex-end;
+}
+
+.overlay.center {
+    justify-content: center;
+}
+
+.floating-card {
+    align-self: center;
+}
+.links a {
+    text-decoration: none;
+    color: var(--blue);
+
+    width: 1em;
+    height: 1em;
+    display: block;
+
+    margin: 0.5em;
+}
+
+
+.links a:first-child {
+    margin-left: 0;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+}
+
+.links i {
+    height: 1em;
+    width: 1em;
+    text-align: center;
+}
+
+.links .link-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    flex: 1;
+    margin-right: 0.25rem;
+}
+
+a .tooltip {
+    position: absolute;
+    font-size: 1rem;
+    line-height: 1em;
+    margin-left: 1em;
+    padding: 0.5em 0.75em;
+    font-weight: 900;
+    visibility: hidden;
+    border-radius: 3px;
+    z-index: 1;
+    background: var(--black);
+    color: var(--white);
+}
+
+a .tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -0.75em;
+    left: -1em;
+    border: solid 0.75em transparent;
+    border-right-color: var(--black);
+    z-index: 1;
+}
+
+a:hover .tooltip {
+    visibility: visible;
+}
+
+a .tooltip:hover {
+    visibility: hidden;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .cardMain {
+        width: 30%;
+        align-self: center !important;
+        margin: 0 auto;
+    }
+    h1 {
+       font-size: 56px; 
+    }
+    p {
+        font-size: 36px;
+        font-weight: 300;
+        position: center;
+    }
+    .cardHeader img {
+        float: right;
+        width: 180px;
+        height: 180px;
+        background: #555;
+        clip-path: circle();
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+    }
+      
+    .cardHeader h1 {
+        position: center;
+        top: 18px;
+        left: 10px;
+    }
+}
