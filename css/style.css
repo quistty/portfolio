@@ -162,7 +162,7 @@ a .tooltip:hover {
 
 
 
-@media screen and (max-width: 1080px) {
+@media screen {
     .cardMain {
         width: 30%;
         align-self: center !important;
